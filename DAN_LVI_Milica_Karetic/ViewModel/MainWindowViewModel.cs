@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-
-
-using System.ComponentModel;
 using System.IO.Compression;
 
 namespace DAN_LVI_Milica_Karetic.ViewModel
@@ -102,8 +95,6 @@ namespace DAN_LVI_Milica_Karetic.ViewModel
                 MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("HTML file not generated, please try again.", "Notification");
             }
         }
-
-        
 
     }
 }
