@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DAN_LVI_Milica_Karetic.ViewModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DAN_LVI_Milica_Karetic
 {
@@ -23,6 +11,30 @@ namespace DAN_LVI_Milica_Karetic
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainWindowViewModel();
+        }
+
+        /// <summary>
+        /// get html file button listener
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GetHtmlBtn(object sender, RoutedEventArgs e)
+        {
+            //call method to generate html file
+            MainWindowViewModel.GetHtmlFile(HTMLbox.Text);
+            HTMLbox.Text = "";
+        }
+
+        /// <summary>
+        /// get zip file button listener
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MakeZipFile(object sender, RoutedEventArgs e)
+        {
+            //call method to generate zip file
+            MainWindowViewModel.CreateZip();
         }
     }
 }
