@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DAN_LVI_Milica_Karetic"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="800">
     <Grid>
-        
+        <Button Click="GetHtmlBtn"
+                Content="Download HTML"
+                HorizontalAlignment="Left"
+                Margin="551,189,0,0"
+                VerticalAlignment="Top"
+                Width="99" />
+        <Button Click="MakeZipFile"
+                Content="Zip files"
+                HorizontalAlignment="Left"
+                Margin="150,184,0,0"
+                VerticalAlignment="Top"
+                Width="75" />
+        <TextBox x:Name="HTMLbox"
+                 HorizontalAlignment="Left"
+                 Height="40"
+                 Margin="150,100,0,0"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="500" />
+        <Label FontSize="20"
+               Content="Type website address:"
+               HorizontalAlignment="Left"
+               Margin="302,58,0,0"
+               VerticalAlignment="Top" />
     </Grid>
 </Window>

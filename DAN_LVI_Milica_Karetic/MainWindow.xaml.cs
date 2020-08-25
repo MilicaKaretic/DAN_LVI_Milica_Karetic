@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAN_LVI_Milica_Karetic.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,19 @@ namespace DAN_LVI_Milica_Karetic
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainWindowViewModel();
+        }
+
+        
+        private void GetHtmlBtn(object sender, RoutedEventArgs e)
+        {
+            MainWindowViewModel.GetHtmlFile(HTMLbox.Text);
+            HTMLbox.Text = "";
+        }
+
+        private void MakeZipFile(object sender, RoutedEventArgs e)
+        {
+            MainWindowViewModel.CreateZip();
         }
     }
 }
